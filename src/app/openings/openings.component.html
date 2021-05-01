@@ -1,0 +1,30 @@
+<h1>OPENINGS</h1>
+<hr>
+<mat-form-field appearance="fill">
+    <mat-label>Choose one</mat-label>
+    <mat-select (selectionChange)="changeSelectedInfo($event.value)">
+        <ng-container *ngFor = "let opening of (openings | async )">
+            <mat-optgroup label="{{opening['type']}}">
+                <mat-option value="{{opening['id']}}">{{opening['name']}}</mat-option>
+            </mat-optgroup>
+        </ng-container>
+    </mat-select>
+</mat-form-field>
+<div>
+    <mat-label>Information</mat-label>
+    <br>
+    <ng-container *ngIf="selected['name']">
+        <mat-label>Name: </mat-label> <span>{{selected['name']}}</span>
+        <br>
+        <mat-label>Origin: </mat-label> <span>{{selected['origin']}}</span>
+        <br>
+        <mat-label>Called: </mat-label> <span>{{selected['called']}}</span>
+        <br>
+        <mat-label>Type: </mat-label> <span>{{selected['type']}}</span>
+        <br>
+        <mat-label>Movements: </mat-label> <span>{{selected['movements']}}</span>
+        <br>
+        <mat-label>FEN: <br> 
+        </mat-label> <span>{{selected['FEN']}}</span>
+    </ng-container>
+</div>

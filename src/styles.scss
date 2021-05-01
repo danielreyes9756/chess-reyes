@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-image: url("./assets/1307130.jpg")}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+
+
+.enfasisTitle {
+  overflow: auto;
+  text-align: center;
+  color: hsl(50, 50%, 50%);
+  font-family: 'Bangers', cursive;
+  position: relative;
+  letter-spacing: 15px;
+  font-size: 5em;
+  text-transform: uppercase;
+  background-color: rgb(22, 78, 22);
+}
+
+.menu{ 
+    width: 45%;
+    float: left;
+    display: flex;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    mat-card-content {
+      text-align: left;
+    }
+}
+
+@media only screen and (max-width: 1656px) {
+  .menu{ 
+    width: 40%;
+    margin-left: 0px;
+  }
+  
+}
+@media only screen and (max-width: 1520px) {
+  .menu{ 
+    width: 35%;
+    margin-left: 0px;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .menu{ 
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .menu{ 
+    width: 100%;
+    margin-left: 0px;
+  }
+}

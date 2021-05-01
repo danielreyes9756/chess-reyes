@@ -1,0 +1,12 @@
+<h1>GAME MOVEMENTS</h1>
+<hr>
+<mat-card-content>
+    <ng-container *ngFor="let movement of history; let i = index">
+        <span>{{i}}.-</span>
+        <span *ngIf="movement['piece'] === 'Knight'; else notKnight">{{pieces[0]['N' + movement['color'][0]]}}</span>
+        <ng-template #notKnight>{{pieces[0][movement['piece'][0] + movement['color'][0]]}}</ng-template>
+        <strong></strong> {{movement['move']}}<span *ngIf="movement['x']">x</span>
+        <span style="margin-right: 50px;"></span>
+    </ng-container>
+</mat-card-content>
+

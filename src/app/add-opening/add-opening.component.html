@@ -1,0 +1,44 @@
+<div class="container">
+    <h2 mat-dialog-title><strong>ADD A OPENNING</strong></h2>
+    <hr>
+    <mat-dialog-content>
+       <p>
+        <mat-form-field appearance="outline">
+            <mat-label>Opennig Name</mat-label>
+            <input matInput placeholder="Sicilian Defense" [(ngModel)]="data.name">
+        </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Opennig Origin</mat-label>
+                <input matInput placeholder="Giulio Polerio, 1594" [(ngModel)]="data.origin">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Opennig Secondary Name</mat-label>
+                <input matInput placeholder="Sicilian" [(ngModel)]="data.called">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Opennig Type</mat-label>
+                <input matInput placeholder="Aperturas semiabiertas" [(ngModel)]="data.type">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Opennig Movements</mat-label>
+                <input matInput placeholder="pe4 Pc5" [(ngModel)]="data.movements">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Opennig FEN</mat-label>
+                <input matInput placeholder="rnbqkbnr/pp1ppppp/8/2p5/4P3/8/PPPP1PPP/RNBQKBNR w KQkq - 0 0" [(ngModel)]="data.FEN">
+            </mat-form-field>
+        </p>
+      <button class="btn btn-primary btn-lg btn-block" [mat-dialog-close]=data>Add</button>
+      <button class="btn btn-primary btn-lg btn-block" [mat-dialog-close]="false">Cancel</button>
+    </mat-dialog-content>
+</div>

@@ -1,0 +1,10 @@
+<div class="container">
+<h2 mat-dialog-title><strong>WELLCOME TO REYES CHESS</strong></h2>
+<mat-dialog-content>
+  <h4 mat-dialog-title>Select mode</h4>
+  <hr>
+  <button class="btn btn-primary btn-lg btn-block" [mat-dialog-close] (click)="redirect('Game')">Game</button>
+  <button class="btn btn-primary btn-lg btn-block" [mat-dialog-close] (click)="redirect('Openings')" >Learn Openings</button>
+  <button class="btn btn-primary btn-lg btn-block" [mat-dialog-close] (click)="redirect('Add')">Add Openings</button>
+</mat-dialog-content>
+</div>
