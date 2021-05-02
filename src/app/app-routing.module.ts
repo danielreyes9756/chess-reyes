@@ -6,12 +6,12 @@ import { OpeningsComponent } from './openings/openings.component';
 import { AddOpeningComponent } from './add-opening/add-opening.component';
 
 const routes: Routes = [
+  {path:"", pathMatch:"full",redirectTo: "/Intro"},
   {path: "Intro", component: IntroComponent},
   {path: "Game", component: GameComponent},
   {path: "Openings", component: OpeningsComponent},
   {path: "Add", component: AddOpeningComponent},
-  {path:"", pathMatch:"full",redirectTo: "Intro"},
-  {path:"**", redirectTo: "Intro"}
+  {path:"**", redirectTo: "/Intro"}
 ];
 
 @NgModule({
