@@ -41,15 +41,15 @@ export class AppComponent {
     this.navLinks = [
       {
           label: 'Play Game',
-          link: './Game',
+          link: './game',
           index: 0,
       }, {
           label: 'Learn Openings',
-          link: './Openings',
+          link: './openings',
           index: 1
       }, {
         label: 'Add Openings',
-        link: './Add',
+        link: './add',
         index: 1
       }
     ]; 
